@@ -1,4 +1,4 @@
-:robot { --primary:#333; --light: #f4f4f4; }
+:robot{ --primary:#333; --light: #f4f4f4; }
 body { font-family: sans-serif; margin: 0; background: var(--light); color: var(--dark); }
 nav { background: var(--primary); padding: 1rem; display: flex; justify-content: space-around; }
 nav a { color: white; text-decoration: none; font-weight: bold; }
@@ -11,7 +11,7 @@ button:hover { opacity: 0.9; }
 table  { width: 100%; border-collapse: collapse; margin-top: 1rem; }
 th, td { border-bottom:1xp solid #ddd; padding: 10px; text-align: left; }
 
-.banner {
+.banner{
     background: linear-gradient(rgba(0,85,153,0.8), rgba(0,85,153,0.8)), url('imagens\senai.png');
     background-size: cover;
     color:white;
@@ -20,13 +20,13 @@ th, td { border-bottom:1xp solid #ddd; padding: 10px; text-align: left; }
     margin-bottom: 10px;
 }
 
-.banner h1 {
+.banner h1{
     margin: 0;
     font-size: 2.5rem;
 }
 
 /* Estilo do Rodapé*/
-.rodape {
+.rodape{
     background-color: #333; 
     color: white;
     text-align: center:
@@ -42,13 +42,13 @@ th, td { border-bottom:1xp solid #ddd; padding: 10px; text-align: left; }
 }
 
 /* Ajuste para o corpo da página não "cortar" o rodapé em telas pequenas */
-body {
+body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
 }
 
-.container {
+.container{
     flex: 1; /* Faz o conteúdo principal esticar e empurrar o rodapé para baixo */
 }
