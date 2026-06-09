@@ -66,6 +66,28 @@ app.get('/listar-clientes', (req, res) => {
     });
 });
 
+//***NOVA ROTA: Alterar cliente existente *** | Acrescentar tudo
+app.put('/alterar-cliente/:id', (req, res) => {
+	const { id } = req.params;
+	const { nome, cpf, telefone } = req.body;
+	const sql = `UPTADE clientes SET nome = ?, cpf = ?, telefone = ? WHERE id = ?`;
+
+	db.run(sql,[nome, cpf, telefone, id], (err) => {
+		if (err) return res.status(500).json({error: err.message });
+		res.json({success: true});
+	});
+}):
+
+//***NOVAS ROTAS: Excluir cliente ***|Acresente tudo
+app.delete('/excluir-clientes/:id', (req, res) => {
+	const { id }= req.params;
+	db.run(`DELETE FROM clientes WHERE id = ?`, [id], (err) => {
+		if (err) return res.status(500).json({error: err.message });
+		res.json({ success: true });
+	});
+});
+
+
 // --- ROTAS DE PRODUTOS (ESTOQUE) ---
 app.post('/salvar-produto', (req, res) => {
     const { descricao, preco, estoque } = req.body;
