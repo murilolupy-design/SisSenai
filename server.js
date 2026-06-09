@@ -76,7 +76,7 @@ app.put('/alterar-cliente/:id', (req, res) => {
 		if (err) return res.status(500).json({error: err.message });
 		res.json({success: true});
 	});
-}):
+});
 
 //***NOVAS ROTAS: Excluir cliente ***|Acresente tudo
 app.delete('/excluir-clientes/:id', (req, res) => {
