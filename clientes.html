@@ -71,7 +71,7 @@
             });
 		}
 			//Lógica para Salvar (Novo ou Edição) | Acrescentar tudo
-			document.getElementByld('form-clientes').onsubmit=function(e){
+			document.getElementByld('form-clientes').onsubmit=function(e) {
 				e.preventDefaut();
 				const id = this.dataset.id; //Verificar se há um ID guardado para edição
 				const dados = {
@@ -85,11 +85,11 @@
 
 				fetch(url, {
 					method: metodo,
-					headers: { 'Content-Type': 'application/json'},
+					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(dados)
 				}).then(() => {
 					alert(id ? "Cliente alterado!" : "Cliente salvo!");
-					location.reloa();
+					location.reload();
 				});
 			};
 
