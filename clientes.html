@@ -54,6 +54,7 @@
             .then(res => res.json())
             .then(clientes => {
                 const corpoTabela = document.getElementById('lista-clientes');
+				corpoTabela.innerHTML = '';
                 clientes.forEach(c => {
                     corpoTabela.innerHTML += `
                         <tr>
