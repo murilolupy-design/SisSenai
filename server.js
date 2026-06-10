@@ -58,7 +58,7 @@ app.post('/salvar-cliente', (req, res) => {
         res.redirect('/clientes.html');
     });
 });
-
+//Listar todos os clientes
 app.get('/listar-clientes', (req, res) => {
     db.all("SELECT * FROM clientes", [], (err, rows) => {
         if (err) return res.status(500).json(err);
